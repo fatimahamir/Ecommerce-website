@@ -1,0 +1,59 @@
+
+@import "tailwindcss";
+
+/*colours*/
+:root {
+  --color-primary: #006d5b;
+  --color-primary-dark: #00574b;
+  --color-primary-light: #e6f7f1;
+  --color-secondary: #0d5c53;
+  --color-accent: #721230;
+  --color-blue-brand: #0D6EFD;
+}
+
+@theme {
+
+  --color-primary: #006d5b;
+  --color-primary-dark: #00574b;
+  --color-primary-light: #e6f7f1;
+  
+
+  --color-secondary: #0d5c53;
+  --color-accent: #721230;
+  --color-blue-brand: #0D6EFD;
+  
+  --color-page: #F3F4F6;
+  --color-login: #E3F0FF;
+  --color-soft-blue: #e8f1fa;
+  --color-soft-mint: #e6f7f1;
+  --color-soft-orange: #fff4e6;
+  --color-soft-lavender: #f5f3ff;
+}
+
+
+body {
+  background-color: var(--color-page);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}
