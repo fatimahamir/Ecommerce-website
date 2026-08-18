@@ -1,16 +1,73 @@
-# React + Vite
+# 🛍️ Shopora — E-Commerce Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, fully responsive e-commerce application built with **React**, **Redux Toolkit** and **Tailwind CSS**. Powered by the **DummyJSON API**, featuring a complete shopping flow — from browsing products to placing orders with protected checkout.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🏠 Home page with hero carousel, deals section & category promotions
+- 🛒 Product listing with filters (category, brand, price, rating), sorting, search & pagination
+- 📦 Product details with image gallery, reviews, ratings & related products
+- 🛍️ Shopping cart with quantity management, "Save for later" & localStorage persistence
+- ❤️ Wishlist with persistent storage
+- 🔐 Login/Signup with **protected routes** (checkout & profile)
+- 💳 Checkout with form validation & order confirmation
+- 🔥 Deals page with Flipkart-style auto-sliding banner carousel
+- 🔔 Toast notifications on cart/wishlist actions
+- 🎨 Theme-driven UI — colors controlled from a single source
+- 📱 Fully responsive (mobile, tablet, desktop)
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Technology | Purpose |
+|------------|---------|
+| React + Vite | UI & build tool |
+| Redux Toolkit | State management |
+| React Router | Routing & protected routes |
+| Tailwind CSS | Styling |
+| DummyJSON API | Products & auth data |
+| localStorage | Cart & wishlist persistence |
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# Clone the repository
+git clone https://github.com/YOUR-USERNAME/ecommerceapp.git
+
+# Move into the folder
+cd ecommerceapp
+
+# Install dependencies
+npm install
+
+# Run the app
+npm run dev
+```
+
+Open `http://localhost:5173` in your browser.
+
+## 🔑 Demo Login
+
+| Username | Password |
+|----------|----------|
+| `emilys` | `emilyspass` |
+
+## 📁 Project Structure
+
+```
+src/
+├── components/      # Reusable UI components
+│   ├── home/        # Hero, deals, category sections
+│   ├── product-listing/
+│   ├── product-details/
+│   ├── cart/
+│   ├── checkout/
+│   └── layouts/     # Navbar, Footer, MobileMenu
+├── pages/           # Route pages
+├── routes/          # AppRoutes + ProtectedRoute
+├── store/           # Redux store & slices
+└── assets/          # Images & banners
+```
+
+---
+
+Made with ❤️ using React & Tailwind CSS
