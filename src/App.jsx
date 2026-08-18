@@ -17,20 +17,32 @@ const ScrollToTop = () => {
   return null;
 };
 
-const App = () => (
-  <BrowserRouter>
-    <ScrollToTop />
-       <Toast />
-    <div className="min-h-screen flex flex-col bg-gray-100">
-    
+const Layout = () => {
+  const { pathname } = useLocation();
+  
+  const hideNewsletterPages = ["/login", "/checkout", "/profile"];
+  const shouldHideNewsletter = hideNewsletterPages.includes(pathname);
+
+  return (
+    <>
       <Navbar />
       <CategoryNavbar />
       <main className="flex-1">
         <AppRoutes />
       </main>
-      <Newsletter />
+      {!shouldHideNewsletter && <Newsletter />}
       <Footer />
       <AuthModal />
+    </>
+  );
+};
+
+const App = () => (
+  <BrowserRouter>
+    <ScrollToTop />
+    <Toast />
+    <div className="min-h-screen flex flex-col bg-gray-100">
+      <Layout />
     </div>
   </BrowserRouter>
 );
